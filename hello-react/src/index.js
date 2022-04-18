@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './App2';//시작 스크립트
 import reportWebVitals from './reportWebVitals';
 
 //컴포넌트 페이지에 렌더링 하는 역할, react-dom 모듈을 불러와 사용

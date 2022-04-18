@@ -25,7 +25,9 @@ function App() {
     //컴포넌트 내에는 단 하나의 요소로 감싸주어야만 한다
     // 이유는 : VirtualDOM 에서 컴포넌트 변화를 효율적으로 감지하기 위함
     // div요소 외다른것 사용하려면 Fragment기능을 쓴다(리액트16이상)
-    <div className="App">
+
+    //className워드를 사용하여 .react라는 css를 불러왔다.class <- 기존에 있어서 겹치므로 리액트는 className을 쓴다
+    <div className="react">
       {/* 조건부렌더링 : ?, : 을 쓰는 기본형태, null은 아무것도 안보여줌을 뜻함 */}
       {name === '리액트' ? <h1>[===, ?, :] if true that show</h1> : null} 
 
