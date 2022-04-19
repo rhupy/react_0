@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App2';//시작 스크립트
+import App2 from './App2';//시작 스크립트
 import reportWebVitals from './reportWebVitals';
 
 //컴포넌트 페이지에 렌더링 하는 역할, react-dom 모듈을 불러와 사용
@@ -11,7 +11,7 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   //React.StrictMode 는 레거시 기능을 사용하지 못하게 한다. ref 등 나중에는 사라질 기능들을 쓸때 경고를 출력
   <React.StrictMode>
-    <App />
+    <App2 />
   </React.StrictMode>,
   document.getElementById('root')
 );

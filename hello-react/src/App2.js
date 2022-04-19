@@ -1,14 +1,9 @@
-import './App.css';
+import MyComponent from "./MyComponet";
+//import React from 'react';
 
-function App() {
-  const name = '리액트';
-  return (
-    <>
-      {/*주석입력법*/}
-      <div className="react">{name}</div>
-      <input name="a"></input>
-    </>
-  );
-}
+const App2 = () => {
+  //아래의 리액트란 문자열은 props.children 을 의미한다
+  return <MyComponent kkk="abc" favoriteNumber="123"></MyComponent> 
+};
 
-export default App;
+export default App2;
