@@ -1,6 +1,6 @@
 import { useReducer } from 'react';
 
-//파라미터 action에, 아래에서 콜하는 (e.target)이 들어감
+//파라미터 action에, 아래 23리인에서 콜하는 (e.target)이 들어감
 function reducer(state, action) {
     console.log('action.name : ' + action.name);
     console.log('action.value : ' + action.value);
