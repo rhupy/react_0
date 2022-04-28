@@ -7,7 +7,8 @@ import { Component } from 'react';
 //import ValidationSample from './4-EventHandling/ValidationSample';
 import ScrollBox from './4-EventHandling/ScrollBox';
 import IterationSample from './6장 컴포넌트 반복/IterationSample';
-//import aaa from './7장 컴포넌트의 라이프사이클 메서드/IterationSample';
+import LifeCycleSample from './7장 라이프사이클 메서드/LifeCycleSample';
+import ErrorBoundary from './7장 라이프사이클 메서드/ErrorBoundary';
 
 //함수형 컴포넌트
 /*
@@ -16,8 +17,23 @@ const App2 = () => {
     return <App />; //리액트</EventPractice>;
 };
 */
-//클래스형 컴포넌트로 렌더링하자 (for ref사용11)
+
+//랜덤 색상을 생성
+function getRandomColor() {
+    return '#' + Math.floor(Math.random() * 16777215).toString(16);
+}
+
+//클래스형 컴포넌트로 렌더링하자 (for ref사용)
 class App2 extends Component {
+    state = {
+        color: '#000000',
+    };
+    handleClick = () => {
+        this.setState({
+            color: getRandomColor(),
+        });
+    };
+
     render() {
         const style = {
             border: '1px solid black',
@@ -26,14 +42,17 @@ class App2 extends Component {
             overflow: 'auto',
             position: 'relative',
         };
-        const innerStyle = {
-            width: '100%',
-            height: '650px',
-            background: 'linear-gradient(white, black)',
-        };
 
         return (
             <div>
+                {/*7장 (page188 에 정리) */}
+                <div style={style}>
+                    <button onClick={this.handleClick}>랜덤 색상</button>
+                    <ErrorBoundary>
+                        <LifeCycleSample color={this.state.color} />
+                    </ErrorBoundary>
+                </div>
+
                 {/*6장*/}
                 <div style={style}>
                     <IterationSample />
