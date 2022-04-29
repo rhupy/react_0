@@ -6,6 +6,10 @@ import Info from './Info';
 import Info2 from './Info2';
 import Counter2 from './Counter2';
 import Info3 from './Info3';
+import Average from './Average';
+import Average2 from './Average2';
+import Average3 from './Average3';
+import Info4 from './info4';
 
 const style = {
     border: '1px solid black',
@@ -21,6 +25,26 @@ function App() {
 
     return (
         <div>
+            {/*8장 Hooks : Custom Hook */}
+            <div style={style}>
+                <Info4 />
+            </div>
+
+            {/*8장 Hooks : useRef : ref쉽게 쓰기 */}
+            <div style={style}>
+                <Average3 />
+            </div>
+
+            {/*8장 Hooks : useCallback : 연산 최적화2*/}
+            <div style={style}>
+                <Average2 />
+            </div>
+
+            {/*8장 Hooks : useMemo : 연산 최적화*/}
+            <div style={style}>
+                <Average />
+            </div>
+
             {/*8장 Hooks : useReducer : 인풋상태 관리*/}
             <div style={style}>
                 <Info3 />

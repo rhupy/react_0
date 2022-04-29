@@ -45,7 +45,7 @@ class App2 extends Component {
 
         return (
             <div>
-                {/*7장 (page188 에 정리) */}
+                {/*7장 라이프사이클 메서드 (page188 에 정리) */}
                 <div style={style}>
                     <button onClick={this.handleClick}>랜덤 색상</button>
                     <ErrorBoundary>
