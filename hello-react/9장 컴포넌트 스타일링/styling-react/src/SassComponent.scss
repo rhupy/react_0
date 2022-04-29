@@ -1,11 +1,58 @@
 //변수 사용하기
 $red: #fa5252;
 $orange: #fd7314;
-$yello: yellow;
+$yellow: yellow;
+$green: green;
 $blue: blue;
 $indigo:indigo;
 $violet: violet;
+
 //믹스인 만들기 (재사용되는 스타일 블록을 함수처럼 사용할 수 있음)
 @mixin square($size) {
     $calculated: 32px * $size;
+    width:$calculated;
+    height: $calculated;
+}
+
+.SassComponent {
+    disply: flex;
+    .box{
+        background: red;
+        cursor:pointer;
+        transition: all 0.3s ease-in;
+        &.red{
+            //.red클래스가 .box와 함께 사용되었을 때
+            background: $red;
+            @include square(1);
+        }
+        &.orange{
+            background: $orange;
+            @include square(2);
+        }
+        &.yellow{
+            background: $yellow;
+            @include square(3);
+        }
+        &.green{
+            background: $green;
+            @include square(4);
+        }
+        &.blue{
+            background: $blue;
+            @include square(5);
+        }
+        &.indigo{
+            background: $indigo;
+            @include square(6);
+        }
+        &.violet{
+            background: $violet;
+            @include square(7);
+        }
+        &:hover{
+            //.box에 마우스를 올렷을때
+            background: black;
+        }
+
+    }
 }

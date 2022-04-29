@@ -5,7 +5,7 @@ import { useReducer } from 'react';
 // state는 이전값이고
 // action은 화면에서 이벤트가 일어난 변경점을 가리키는 변수
 //  그것이 name이나 nickname 이라면,
-//  state 에 있는 name 이나 nickname 을 그 액션의 value로 설정(인펏에서 넣은 값)하게 되는것!
+//  그 액션의 value를 설정(인펏에서 유저가 넣은 값)하게 되는것!
 function reducer(state, action) {
     return {
         ...state,
