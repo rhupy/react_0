@@ -1,7 +1,16 @@
 @import './styles/utils.scss';
+@import '~include-media/dist/_include-media';
+@import '~open-color/open-color';
 
 .SassComponent {
     disply: flex;
+    //open-color 의 팔레트에서 불러온 색상($oc-gray-9)
+    background: $oc-gray-9;
+
+    //화면 가로크기가 768px 미만이면 색을 변경($oc-gray-2)
+    @include media('<768px'){
+        background: $oc-gray-2;
+    }
     .box{
         background: red;
         cursor:pointer;
