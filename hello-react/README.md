@@ -3,7 +3,7 @@
 yarn install.\
 yarn add open-color inclued-media.\
 yarn add styled-components.\
-마켓플레이스 : vscode-styled-components.\
+마켓플레이스 : vscode-styled-components
 
 # Getting Started with Create React App
 
