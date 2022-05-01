@@ -5,10 +5,15 @@ import { Component } from 'react';
 import SassComponent from './SassComponent';
 
 import CSSModule from './CSSModule';
+import StyledComponent from './StyledComponent';
 
 function App() {
     return (
         <div>
+            <div>
+                <StyledComponent />
+            </div>
+            <p />
             <div>
                 <CSSModule />
             </div>

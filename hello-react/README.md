@@ -1,3 +1,10 @@
+# 설치한 라이브러리
+
+yarn install
+yarn add open-color inclued-media
+yarn add styled-components
+마켓플레이스 : vscode-styled-components
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
