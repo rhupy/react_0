@@ -1,4 +1,4 @@
-# 설치한 라이브러리
+# 설치한 라이브러리 목록
 
 yarn install.\
 yarn add open-color inclued-media.\
