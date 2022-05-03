@@ -1,14 +1,14 @@
 ### 10장 - 일정 관리 웹 어플리케이션 만들기
 
-# Sass활용함
+# Sass, classnames, react-icons 활용함
 
-yarn add sass classnames react-icons\
-: 조건부 스타일링을 위해 설치\
-\
+`yarn add sass classnames react-icons`
 react-icons 는 리액트에서 예쁜 아이콘을 쓸수 있는 라이브러리\
 아이콘 리스트와 사용법은 https://react-icons.netlify.com\
 이 라이브러릐 장점은 SVG 형태로 이루어진 아이콘을 리액트 컴포넌트처럼 매우 쉽게 사용할 수 있다는 점\
 아이콘의 크기나 색상은 props 혹은 CSS 스타일로 변경하여 사용할 수 있다\
+\
+classnames 는 조건부 스타일링을 위하여 사용
 
 ## 만든 컴포넌트 설명
 
