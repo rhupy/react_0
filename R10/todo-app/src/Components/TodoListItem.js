@@ -8,8 +8,8 @@ import './TodoListItem.scss';
 //조건부 스타일링을 위하여
 import cn from 'classnames';
 
-const TodoListItem = ({ todo }) => {
-  const { text, checked } = todo;
+const TodoListItem = ({ todo, onRemove }) => {
+  const { id, text, checked } = todo;
 
   return (
     <div className="TodoListItem">
@@ -18,7 +18,9 @@ const TodoListItem = ({ todo }) => {
         {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
         <div className="text">{text}</div>
       </div>
-      <div className="remove">
+
+      {/* onClick은 Div Dom의 이벤트이다. 함수를 넣어야한다 onClick={onRemove(id)} 라고 하면 오류남. onRemove는 const 변수*/}
+      <div className="remove" onClick={() => onRemove(id)}>
         <MdRemoveCircleOutline />
       </div>
     </div>

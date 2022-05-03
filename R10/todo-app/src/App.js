@@ -51,12 +51,21 @@ const App = () => {
     // 논외로, useMemo 또한 useCallback 처럼 사용법이 같으며 성능을 위해 사용되며, 마찬가지로 두번째가 의존성이다
     // 단, useMemo는 함수가 아닌 상태값을 반환한다. 그러므로 useMemo ( () => () => {<~로직>} , []) 이런식으로 쓰면 useCallback랑 같긴함
   );
+
+  const onRemove = useCallback(
+    (id) => {
+      setTodos(todos.filter((todo) => todo.id !== id)); //해당 id만 제외하고 남긴다
+    },
+    [todos],
+  );
   return (
     <TodoTemplate>
       {/** TodoInsert 라는 사용자 컴퍼넌트에는 { onInsert } 로 props가 한개 있고, */}
-      {/** 여기서 'onInsert' prop를 명시하여, onInsert힘수를 props 로 전달한다 */}
+      {/** 여기서 'onInsert' prop를 명시하여, onInsert 힘수를 props 로 전달한다 */}
       <TodoInsert onInsert={onInsert} />
-      <TodoList todos={todos} />
+      {/** TodoList 라는 사용자 컴퍼넌트에는 { onRemove } 로 props가 한개 있고, */}
+      {/** 여기서 'onRemove' prop를 명시하여, onRemove 힘수를 props 로 전달한다 */}
+      <TodoList todos={todos} onRemove={onRemove} />
     </TodoTemplate>
   );
 };
