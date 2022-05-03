@@ -10,6 +10,11 @@ react-icons 는 리액트에서 예쁜 아이콘을 쓸수 있는 라이브러�
 \
 classnames 는 조건부 스타일링을 위하여 사용
 
+## 리액트 개발자 도구 (엣지 / 크롬)
+
+확장 검색 'react' Develop tool 설치하면, 브라우저 개발자모드에서 compoent 항목이 생김\
+리액트 컴포넌트를 심층분석 할 수 있다 (props, hooks 등)
+
 ## 만든 컴포넌트 설명
 
 # TodoTemplate
