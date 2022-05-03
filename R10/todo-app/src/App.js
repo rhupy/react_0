@@ -58,6 +58,18 @@ const App = () => {
     },
     [todos],
   );
+
+  const onToggle = useCallback(
+    (id) => {
+      setTodos(
+        todos.map(
+          (todo) =>
+            todo.id === id ? { ...todo, checked: !todo.checked } : todo, //map으로 만든 배열에서, id가 다른 나머진 그대로 반환함
+        ),
+      );
+    },
+    [todos],
+  );
   return (
     <TodoTemplate>
       {/** TodoInsert 라는 사용자 컴퍼넌트에는 { onInsert } 로 props가 한개 있고, */}
@@ -65,7 +77,7 @@ const App = () => {
       <TodoInsert onInsert={onInsert} />
       {/** TodoList 라는 사용자 컴퍼넌트에는 { onRemove } 로 props가 한개 있고, */}
       {/** 여기서 'onRemove' prop를 명시하여, onRemove 힘수를 props 로 전달한다 */}
-      <TodoList todos={todos} onRemove={onRemove} />
+      <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
     </TodoTemplate>
   );
 };

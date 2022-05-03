@@ -8,13 +8,13 @@ import './TodoListItem.scss';
 //조건부 스타일링을 위하여
 import cn from 'classnames';
 
-const TodoListItem = ({ todo, onRemove }) => {
+const TodoListItem = ({ todo, onRemove, onToggle }) => {
   const { id, text, checked } = todo;
 
   return (
     <div className="TodoListItem">
       {/* checkbox 이고 check 상태에 따라 스타일링 함 */}
-      <div className={cn('checkbox', { checked })}>
+      <div className={cn('checkbox', { checked })} onClick={() => onToggle(id)}>
         {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
         <div className="text">{text}</div>
       </div>
