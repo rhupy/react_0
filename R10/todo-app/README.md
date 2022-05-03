@@ -6,9 +6,33 @@ yarn add sass classnames react-icons\
 : 조건부 스타일링을 위해 설치\
 \
 react-icons 는 리액트에서 예쁜 아이콘을 쓸수 있는 라이브러리\
-아이콘 리스트와 사용법은 https://react-icons.nelify.com\
+아이콘 리스트와 사용법은 https://react-icons.netlify.com\
 이 라이브러릐 장점은 SVG 형태로 이루어진 아이콘을 리액트 컴포넌트처럼 매우 쉽게 사용할 수 있다는 점\
-아이콘의 크기나 색상은 props 혹은 CSS 스타일로 변경하여 사용할 수 있다
+아이콘의 크기나 색상은 props 혹은 CSS 스타일로 변경하여 사용할 수 있다\
+
+## 만든 컴포넌트 설명
+
+# TodoTemplate
+
+화면을 가운데에 정렬, 앱타이틀(일정관리)를 보여준다\
+children 으로 내부 JSX를 props로 받아와서 레더링해준다
+
+# TodoInsert
+
+새로운 항목을 입력하고 추가할 수 있는 컴포넌트\
+state 를 통해 인풋의 상태를 관리
+
+# TodoListITem
+
+각 할일 항목에 대한 정보를 보여주는 컴포넌트. todo 객체를 props로 받아와서 상태에 따라 다른 스타일의 UI를 보여줌
+
+# TodoList
+
+todos 배열을 props 로 받아 온 후, 이를 배열 내장 함수 map을 사용해 여러개의 TodoListItem 컴포넌트로 변환하여 보여줌
+\
+\
+\
+\
 
 # Getting Started with Create React App
 
