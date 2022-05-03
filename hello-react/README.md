@@ -1,9 +1,12 @@
 # 설치한 라이브러리 목록
 
-yarn install.\
-yarn add open-color inclued-media.\
-yarn add styled-components.\
-마켓플레이스 : vscode-styled-components
+yarn install\
+yarn add open-color inclued-media\
+yarn add styled-components
+
+# 마켓플레이스
+
+vscode-styled-components
 
 # Getting Started with Create React App
 
