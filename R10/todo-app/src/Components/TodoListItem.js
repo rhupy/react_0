@@ -1,10 +1,10 @@
+import React from 'react';
 import {
   MdCheckBoxOutlineBlank,
   MdCheckBox,
   MdRemoveCircleOutline,
 } from 'react-icons/md';
 import './TodoListItem.scss';
-
 //조건부 스타일링을 위하여
 import cn from 'classnames';
 
@@ -27,4 +27,5 @@ const TodoListItem = ({ todo, onRemove, onToggle }) => {
   );
 };
 
-export default TodoListItem;
+//export default TodoListItem;
+export default React.memo(TodoListItem);//todo, onRemove, onToggle 가 변해야만 렌더링하도록 함
