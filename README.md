@@ -47,3 +47,8 @@
    `console.log(todos[0] === nextTodos[0])` False 가됨
 
 7. immer 라이브러리 : 불변성을 유지하면서 업데이트하는데 도움
+
+8. yarn add react-virtualized : 보이는거만 렌더링하게 해주는 라이브러리
+   개발자도구의 요소나 컴포넌트탭에서 px단위로 각 항목크기를 알아낸다(테두리 포함)
+   List 컴포넌트를 쓸때는 전체크기, 각항목의 높이, 각 항목 렌더링시 사용할 함수, 배열을 props로 넣는다
+   그러면 자동으로 최적화함 (TodoList.js)

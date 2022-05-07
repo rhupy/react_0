@@ -8,20 +8,26 @@ import './TodoListItem.scss';
 //조건부 스타일링을 위하여
 import cn from 'classnames';
 
-const TodoListItem = ({ todo, onRemove, onToggle }) => {
+//TodoList 최적화 작업후 화면이 깨지므로 props 에 style 를 추가했다(클래스:TodoListItem-virtualized)
+const TodoListItem = ({ todo, onRemove, onToggle, style }) => {
   const { id, text, checked } = todo;
 
   return (
-    <div className="TodoListItem">
-      {/* checkbox 이고 check 상태에 따라 스타일링 함 */}
-      <div className={cn('checkbox', { checked })} onClick={() => onToggle(id)}>
-        {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
-        <div className="text">{text}</div>
-      </div>
+    <div className="TodoListItem-virtualized" style={style}>
+      <div className="TodoListItem">
+        {/* checkbox 이고 check 상태에 따라 스타일링 함 */}
+        <div
+          className={cn('checkbox', { checked })}
+          onClick={() => onToggle(id)}
+        >
+          {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
+          <div className="text">{text}</div>
+        </div>
 
-      {/* onClick은 Div Dom의 이벤트이다. 함수를 넣어야한다 onClick={onRemove(id)} 라고 하면 오류남. onRemove는 const 변수*/}
-      <div className="remove" onClick={() => onRemove(id)}>
-        <MdRemoveCircleOutline />
+        {/* onClick은 Div Dom의 이벤트이다. 함수를 넣어야한다 onClick={onRemove(id)} 라고 하면 오류남. onRemove는 const 변수*/}
+        <div className="remove" onClick={() => onRemove(id)}>
+          <MdRemoveCircleOutline />
+        </div>
       </div>
     </div>
   );
