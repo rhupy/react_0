@@ -28,4 +28,4 @@ const TodoListItem = ({ todo, onRemove, onToggle }) => {
 };
 
 //export default TodoListItem;
-export default React.memo(TodoListItem);//todo, onRemove, onToggle 가 변해야만 렌더링하도록 함
+export default React.memo(TodoListItem); //todo, onRemove, onToggle 가 변해야만 렌더링하도록 함

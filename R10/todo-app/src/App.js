@@ -16,6 +16,7 @@ function createBulkTodos() {
   return array;
 }
 
+//리듀서 펑션 인자 : (반환할 변수, 받을 상태값(분기에 사용) )
 function todoReducer(todos, action) {
   switch (action.type) {
     case 'INSERT': //새로추가
